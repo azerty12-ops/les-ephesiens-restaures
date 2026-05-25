@@ -1,8 +1,8 @@
 import { NextResponse, NextRequest } from "next/server";
 import Stripe from "stripe";
 
-// Initialize Stripe with the secret key from env variables
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
+// Initialize Stripe with the secret key from env variables (fallback to dummy key for build time)
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY || "dummy_key_for_build", {
   apiVersion: "2026-04-22.dahlia", // Use the latest compatible API version
 });
 

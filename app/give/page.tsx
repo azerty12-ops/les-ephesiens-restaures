@@ -52,7 +52,7 @@ export default function GivePage() {
       // Load Stripe and redirect to Checkout
       const stripe = await loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
       if (stripe) {
-        await stripe.redirectToCheckout({ sessionId });
+        await (stripe as any).redirectToCheckout({ sessionId });
       }
     } catch (err) {
       console.error("Erreur serveur:", err);
@@ -166,7 +166,7 @@ export default function GivePage() {
                     <div className="pt-4 border-t border-gray-100">
                       <Button 
                         onClick={handleCheckout}
-                        disabled={isLoading || parseFloat(currentAmount) <= 0}
+                        disabled={isLoading || parseFloat(currentAmount.toString()) <= 0}
                         className="w-full h-16 text-lg rounded-xl bg-accent text-primary hover:bg-accent/90 shadow-lg shadow-accent/20 flex items-center justify-between px-6 group"
                       >
                         <span className="flex items-center gap-2 font-bold">
