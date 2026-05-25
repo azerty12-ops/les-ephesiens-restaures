@@ -1,7 +1,5 @@
 import Link from "next/link";
 import { CheckCircle2, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-
 export default function SuccessPage() {
   return (
     <main className="min-h-screen bg-gray-50 flex items-center justify-center pt-24 pb-20 px-4">
