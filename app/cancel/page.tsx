@@ -21,14 +21,12 @@ export default function CancelPage() {
         </p>
         
         <div className="flex flex-col gap-3">
-          <Button asChild size="lg" className="rounded-full bg-accent text-primary hover:bg-accent/90 h-14 text-lg">
-            <Link href="/give">Réessayer</Link>
-          </Button>
-          <Button asChild variant="ghost" size="lg" className="rounded-full h-14 text-lg text-gray-500">
-            <Link href="/" className="flex items-center gap-2 justify-center">
-              <ArrowLeft size={20} /> Retour à l'accueil
-            </Link>
-          </Button>
+          <Link href="/give" className="inline-flex items-center justify-center rounded-full bg-accent text-primary hover:bg-accent/90 h-14 text-lg font-medium transition-colors">
+            Réessayer
+          </Link>
+          <Link href="/" className="inline-flex items-center justify-center rounded-full h-14 text-lg text-gray-500 hover:bg-gray-100 transition-colors gap-2">
+            <ArrowLeft size={20} /> Retour à l'accueil
+          </Link>
         </div>
       </div>
     </main>

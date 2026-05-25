@@ -25,14 +25,12 @@ export default function SuccessPage() {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="rounded-full bg-primary text-white hover:bg-primary/90 h-14 px-8 text-lg">
-            <Link href="/">Retour à l'accueil</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="rounded-full h-14 px-8 text-lg group">
-            <Link href="/blog" className="flex items-center gap-2">
-              Lire nos articles <ArrowRight className="group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </Button>
+          <Link href="/" className="inline-flex items-center justify-center rounded-full bg-primary text-white hover:bg-primary/90 h-14 px-8 text-lg font-medium transition-colors">
+            Retour à l'accueil
+          </Link>
+          <Link href="/blog" className="inline-flex items-center justify-center rounded-full h-14 px-8 text-lg font-medium border border-gray-200 bg-white hover:bg-gray-50 text-gray-900 group transition-colors">
+            Lire nos articles <ArrowRight className="group-hover:translate-x-1 transition-transform ml-2" />
+          </Link>
         </div>
       </div>
     </main>
